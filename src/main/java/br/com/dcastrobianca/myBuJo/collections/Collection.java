@@ -2,6 +2,7 @@ package br.com.dcastrobianca.myBuJo.collections;
 
 import java.time.LocalDate;
 
+import br.com.dcastrobianca.myBuJo.collections.dto.CollectionRegistrationData;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -28,12 +29,8 @@ public class Collection {
     @Column (name="end_date")
     private LocalDate endDate;
 
-
     public Collection() {
     }
-
-
-    
 
     public Collection(@Valid CollectionRegistrationData data) {
         this.name = data.name();
@@ -41,4 +38,46 @@ public class Collection {
         this.startDate = data.startDate();
         this.endDate = data.endDate();
     }
+
+
+    public long getId() {
+        return this.id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public CollectionType getType() {
+        return this.type;
+    }
+
+    public void setType(CollectionType type) {
+        this.type = type;
+    }
+
+    public LocalDate getStartDate() {
+        return this.startDate;
+    }
+
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDate getEndDate() {
+        return this.endDate;
+    }
+
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+    }
+
 }

@@ -1,4 +1,4 @@
-package br.com.dcastrobianca.myBuJo.collections;
+package br.com.dcastrobianca.myBuJo.collections.dto;
 
 import java.time.LocalDate;
 
@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import br.com.dcastrobianca.myBuJo.collections.CollectionType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
